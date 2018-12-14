@@ -1,0 +1,18 @@
+---
+title: "MPI 2018 Urban and Rural areas"
+output: html_notebook
+---
+
+```{r}
+library(ggplot2)
+library(readr)
+setwd("R")
+getwd()
+```
+
+```{r}
+setwd(".")
+poverty <- read_csv("Rural-Urban-MPI-2018.csv", skip=4)
+new_names <- names(poverty[-c(1, 2, 5, 8, 9, 15:19, 23, 26)])
+new_names
+```
